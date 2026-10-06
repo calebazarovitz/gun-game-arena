@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gun Arena</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="panel left-panel">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">Arena</p>
+            <h1>GUN ARENA</h1>
+          </div>
+          <div class="status-badge" id="roundStatus">Idle</div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-row">
+            <span>Health</span>
+            <span id="playerHealthText">100 / 100</span>
+          </div>
+          <div class="health-bar">
+            <div class="health-fill" id="healthFill"></div>
+          </div>
+        </div>
+
+        <div class="stat-block compact-grid">
+          <div>
+            <p>Credits</p>
+            <strong id="creditsDisplay">250</strong>
+          </div>
+          <div>
+            <p>Wager</p>
+            <strong id="wagerDisplay">50</strong>
+          </div>
+          <div>
+            <p>Streak</p>
+            <strong id="streakDisplay">0</strong>
+          </div>
+          <div>
+            <p>Map</p>
+            <strong id="mapDisplay">Warehouse</strong>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="wagerInput">Set wager</label>
+          <input id="wagerInput" type="range" min="10" max="500" step="10" value="50" />
+          <div class="wager-meta">
+            <span>10</span>
+            <span id="wagerValue">50</span>
+            <span>500</span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Choose arena</label>
+          <div class="map-picker" id="mapPicker">
+            <button class="map-button active" data-map="warehouse">Warehouse</button>
+            <button class="map-button" data-map="desert">Desert</button>
+            <button class="map-button" data-map="city">City</button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Weapon loadout</label>
+          <div class="weapon-list" id="weaponList">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div id="weaponStatsPanel" class="weapon-stats-panel hidden">
+          <h3>Weapon Stats</h3>
+          <div class="stat-detail">
+            <span>Damage</span>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" id="statDamage"></div>
+            </div>
+          </div>
+          <div class="stat-detail">
+            <span>Fire Rate</span>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" id="statFireRate"></div>
+            </div>
+          </div>
+          <div class="stat-detail">
+            <span>Accuracy</span>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" id="statAccuracy"></div>
+            </div>
+          </div>
+          <div class="stat-detail">
+            <span>Ammo Capacity</span>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" id="statCapacity"></div>
+            </div>
+          </div>
+        </div>
+
+        <button id="startButton" class="primary-button">Start Match</button>
+      </aside>
+
+      <main class="arena-panel">
+        <canvas id="gameCanvas" width="980" height="620"></canvas>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
