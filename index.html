@@ -30,7 +30,7 @@
         <div class="stat-block compact-grid">
           <div>
             <p>Credits</p>
-            <strong id="creditsDisplay">250</strong>
+            <strong id="creditsDisplay">500</strong>
           </div>
           <div>
             <p>Wager</p>
@@ -67,40 +67,39 @@
 
         <div class="field-group">
           <label>Weapon loadout</label>
-          <div class="weapon-list" id="weaponList">
-            <!-- Populated by JS -->
-          </div>
-        </div>
-
-        <div id="weaponStatsPanel" class="weapon-stats-panel hidden">
-          <h3>Weapon Stats</h3>
-          <div class="stat-detail">
-            <span>Damage</span>
-            <div class="stat-bar">
-              <div class="stat-bar-fill" id="statDamage"></div>
+          <div class="weapon-list" id="weaponList"></div>
+          <div id="weaponStatsPanel" class="weapon-stats-panel">
+            <h3>Weapon Stats</h3>
+            <div class="stat-detail">
+              <span>Damage</span>
+              <div class="stat-bar"><div class="stat-bar-fill" id="statDamage"></div></div>
             </div>
-          </div>
-          <div class="stat-detail">
-            <span>Fire Rate</span>
-            <div class="stat-bar">
-              <div class="stat-bar-fill" id="statFireRate"></div>
+            <div class="stat-detail">
+              <span>Fire Rate</span>
+              <div class="stat-bar"><div class="stat-bar-fill" id="statFireRate"></div></div>
             </div>
-          </div>
-          <div class="stat-detail">
-            <span>Accuracy</span>
-            <div class="stat-bar">
-              <div class="stat-bar-fill" id="statAccuracy"></div>
+            <div class="stat-detail">
+              <span>Accuracy</span>
+              <div class="stat-bar"><div class="stat-bar-fill" id="statAccuracy"></div></div>
             </div>
-          </div>
-          <div class="stat-detail">
-            <span>Ammo Capacity</span>
-            <div class="stat-bar">
-              <div class="stat-bar-fill" id="statCapacity"></div>
+            <div class="stat-detail">
+              <span>Magazine</span>
+              <span id="statMagazine" style="color: var(--accent);">12</span>
             </div>
           </div>
         </div>
 
-        <button id="startButton" class="primary-button">Start Match</button>
+        <div class="field-group">
+          <label>Spawn location</label>
+          <div class="spawn-picker" id="spawnPicker"></div>
+        </div>
+
+        <div class="deploy-section">
+          <h3>Deploy</h3>
+          <button id="deployButton" class="deploy-button">Deploy to Battle</button>
+        </div>
+
+        <button id="startButton" class="primary-button" style="display: none;">Start Match</button>
       </aside>
 
       <main class="arena-panel">
